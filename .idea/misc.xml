@@ -3,10 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_log_in.xml" value="0.4" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main2.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/font/aclonica.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_log_in.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main2.xml" value="0.1" />
       </map>
     </option>
   </component>
