@@ -14,7 +14,6 @@
 
 
     <TextView
-        style="@style/txtviewstyle"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center|right"
@@ -27,7 +26,6 @@
 
     <EditText
         android:id="@+id/loginEdtTxt"
-        style="@style/txtviewstyle"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -40,7 +38,6 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        style="@style/txtviewstyle"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="#6DDCB1B1"

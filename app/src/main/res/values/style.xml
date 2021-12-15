@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="txtviewstyle">
-
+    <style name="firstUIStyle">
+        <item name= "android:fontFamily">@font/aclonica</item>
+        <item name= "android:shadowColor">#D5D0D0</item>
+        <item name="android:text">@string/title</item>
+        <item name="android:textColor">#FFFFFF</item>
 
     </style>
 
