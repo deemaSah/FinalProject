@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,Gallery.class);
         startActivity(intent);
     }
+
+    public void LogInbtn(View view) {
+        Intent intent2 = new Intent(this,LogInActivity.class);
+        startActivity(intent2);
+    }
 }
