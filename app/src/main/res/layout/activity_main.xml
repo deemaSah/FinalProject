@@ -62,7 +62,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_baseline_photo_library_24"
-                android:backgroundTint="#cdfcff" />
+                android:backgroundTint="#cdfcff"
+                android:onClick="getGalleryActivity"/>
 
             <TextView
                 android:id="@+id/galleryTextView"
