@@ -39,8 +39,17 @@
                 android:gravity="center"
                 android:text="@string/logIn"
                 style="@style/firstUIStyle"
-                android:onClick="LogInbtn"
-                />
+                 android:onClick="LogInbtn" />
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:gravity="center"
+                android:text="next"
+                style="@style/firstUIStyle"
+                android:onClick="next" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -65,6 +74,7 @@
                 android:background="@drawable/ic_baseline_photo_library_24"
                 android:backgroundTint="#cdfcff"
                 android:onClick="getGalleryActivity"/>
+
 
             <TextView
                 android:id="@+id/galleryTextView"
