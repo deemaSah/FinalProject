@@ -6,4 +6,6 @@
     <string name="Gallery">Gallery</string>
     <string name="logIn">LogIn</string>
     <string name="book">Book Now</string>
+    <string name="ServicesButton">Services</string>
+    <string name="offers">Offers</string>
 </resources>

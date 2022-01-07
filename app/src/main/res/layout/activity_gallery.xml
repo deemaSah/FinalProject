@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:gravity="center|fill"
     android:orientation="vertical"
     tools:context=".Gallery">
 
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/image_slider"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="fill"
         app:sliderAnimationDuration="600"
         app:sliderAutoCycleDirection="back_and_forth"
         app:sliderAutoCycleEnabled="true"
@@ -24,18 +25,7 @@
         app:sliderIndicatorSelectedColor="#5A5A5A"
         app:sliderIndicatorUnselectedColor="#FFF"
         app:sliderScrollTimeInSec="2"
-        app:sliderStartAutoCycle="true">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="580dp"
-            android:gravity="bottom|center"
-            android:text="Button"
-            android:onClick="Back"/>
-    </com.smarteist.autoimageslider.SliderView>
+        app:sliderStartAutoCycle="true" />
 
 
 </LinearLayout>

@@ -7,5 +7,10 @@
         <item name="android:textColor">#FFFFFF</item>
 
     </style>
+    <style name="ButtonStyle">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:backgroundTint">#cdfcff</item>
+    </style>
 
 </resources>

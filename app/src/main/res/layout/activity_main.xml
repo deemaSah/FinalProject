@@ -25,46 +25,72 @@
             android:textSize="28dp" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:gravity="center"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/accountTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
+                style="@style/ButtonStyle"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/ic_baseline_account_box_24"
                 android:gravity="center"
-                android:text="@string/logIn"
-                style="@style/firstUIStyle"
                 android:onClick="LogInbtn"
-                />
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/firstUIStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="@string/logIn" />
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="330dp"
-        android:gravity="center"
+        android:gravity="bottom|center"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/offersbutton"
+                style="@style/ButtonStyle"
+                android:background="@drawable/ic_baseline_flight_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/offertextView"
+                style="@style/firstUIStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/offers" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/galleryButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyle"
                 android:background="@drawable/ic_baseline_photo_library_24"
-                android:backgroundTint="#cdfcff"
-                android:onClick="getGalleryActivity"/>
+                android:onClick="getGalleryActivity"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/galleryTextView"
@@ -76,20 +102,19 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/BookButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyle"
                 android:background="@drawable/ic_baseline_calendar_month_24"
-                android:backgroundTint="#cdfcff" />
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
-                android:id="@+id/BookTextView"
+                android:id="@+id/servicesTextView"
                 style="@style/firstUIStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,5 +122,26 @@
                 android:text="@string/book" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/servicesbutton"
+                style="@style/ButtonStyle"
+                android:background="@drawable/ic_baseline_apps_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/firstUIStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ServicesButton" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>
