@@ -11,9 +11,7 @@ public class sliderAdapter extends SliderViewAdapter<sliderAdapter.Holder> {
     int[] images;
 
     public sliderAdapter(int[] images){
-
         this.images = images;
-
     }
     @Override
     public sliderAdapter.Holder onCreateViewHolder(ViewGroup parent) {

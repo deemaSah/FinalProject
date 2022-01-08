@@ -36,6 +36,7 @@
                 android:layout_marginStart="50dp"
                 android:background="@drawable/ic_baseline_account_box_24"
                 android:gravity="center"
+
                 android:onClick="LogInbtn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -46,7 +47,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:gravity="center"
-                android:text="@string/logIn" />
+                android:text="@string/logIn" /><![CDATA[
+=======
+                android:text="@string/logIn"
+                style="@style/firstUIStyle"
+                 android:onClick="LogInbtn" />
+
+>>>>>>> origin/master
+        ]]>
         </LinearLayout>
 
     </LinearLayout>
@@ -91,6 +99,7 @@
                 android:background="@drawable/ic_baseline_photo_library_24"
                 android:onClick="getGalleryActivity"
                 tools:ignore="SpeakableTextPresentCheck" />
+
 
             <TextView
                 android:id="@+id/galleryTextView"
