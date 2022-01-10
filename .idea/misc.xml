@@ -4,13 +4,31 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/font/aclonica.xml" value="0.1" />
-        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_gallery.xml" value="0.22" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_gallery.xml" value="0.1" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_log_in.xml" value="0.22" />
-        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main2.xml" value="0.1" />
-        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_search.xml" value="0.1" />
-        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_search_dialog.xml" value="0.22" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/slider_item.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/hair.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_sports_football_24.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_beauty.xml" value="0.176" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_food.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_gallery.xml" value="0.136" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_hotel_servecies.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_hotel_services.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_log_in.xml" value="0.4" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_search.xml" value="0.4" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_search_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_searchs_dialog.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_services.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_servicesctivity.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_sport.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/card_caption_image.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/searchdalog.xml" value="0.4" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/services.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalProject/app/src/main/res/layout/slider_item.xml" value="0.13020833333333334" />
       </map>
     </option>
   </component>
