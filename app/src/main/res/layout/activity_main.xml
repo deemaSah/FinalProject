@@ -36,7 +36,6 @@
                 android:layout_marginStart="50dp"
                 android:background="@drawable/ic_baseline_account_box_24"
                 android:gravity="center"
-
                 android:onClick="LogInbtn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -47,14 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:gravity="center"
-                android:text="@string/logIn" /><![CDATA[
-=======
-                android:text="@string/logIn"
-                style="@style/firstUIStyle"
-                 android:onClick="LogInbtn" />
-
->>>>>>> origin/master
-        ]]>
+                android:text="@string/logIn" />
         </LinearLayout>
 
     </LinearLayout>
@@ -152,5 +144,13 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        style="@style/ButtonStyle"
+        android:layout_marginStart="50dp"
+        android:gravity="center"
+        android:onClick="next"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </LinearLayout>

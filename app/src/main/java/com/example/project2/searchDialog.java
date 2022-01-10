@@ -8,12 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class searchDialog extends AppCompatDialogFragment {
+public class searchDialog extends AppCompatDialogFragment  {
     TextView adultscounter;
     Button adultsplus;
     int counterads = 0;
@@ -37,7 +38,6 @@ public class searchDialog extends AppCompatDialogFragment {
         return builder.create();
     }
     public void  setAdultscounter (View view){
-        counterads++;
-        adultscounter.setText(Integer.toString(counterads));
+        Toast.makeText( null,"hiii", Toast.LENGTH_SHORT).show();
     }
 }

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void next(View view) {
-        Intent intent2 = new Intent(this,search.class);
+        Intent intent2 = new Intent(this,HotelServeciesActivity.class);
         startActivity(intent2);
     }
 }

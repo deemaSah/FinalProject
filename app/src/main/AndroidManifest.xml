@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.project2">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,9 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2">
         <activity
-            android:name=".searchDialog"
+            android:name=".sportActivity"
             android:exported="true" />
-
+        <activity
+            android:name=".FoodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".beauty"
+            android:exported="true" />
+        <activity
+            android:name=".HotelServeciesActivity"
+            android:exported="true" />
         <activity
             android:name=".search"
             android:exported="true" />
