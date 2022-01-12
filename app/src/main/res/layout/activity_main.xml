@@ -145,12 +145,5 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/next"
-        style="@style/ButtonStyle"
-        android:layout_marginStart="50dp"
-        android:gravity="center"
-        android:onClick="next"
-        tools:ignore="SpeakableTextPresentCheck" />
 
 </LinearLayout>

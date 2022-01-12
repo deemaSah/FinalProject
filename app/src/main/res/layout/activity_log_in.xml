@@ -45,11 +45,11 @@
         android:ems="10"
         android:fontFamily="@font/berkshire_swash"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColorHint="#B7000000" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"

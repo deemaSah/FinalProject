@@ -1,9 +1,10 @@
 package com.example.project2;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,8 +25,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void next(View view) {
-        Intent intent2 = new Intent(this,HotelServeciesActivity.class);
-        startActivity(intent2);
-    }
 }
