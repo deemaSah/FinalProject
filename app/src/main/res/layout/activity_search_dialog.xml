@@ -37,7 +37,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/plus"
-                android:onClick="counterPls"
+                android:onClick="adscounterPls"
                 android:hapticFeedbackEnabled="false" />
 
             <TextView
@@ -53,7 +53,7 @@
                 android:layout_width="72dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-                android:onClick="counterMns"
+                android:onClick="adscounterMns"
                 android:background="@drawable/minusicon" />
 
         </LinearLayout>
@@ -90,6 +90,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/plus"
+                android:onClick="chilcounterPls"
                 android:hapticFeedbackEnabled="false" />
 
             <TextView
@@ -104,7 +105,8 @@
                 android:id="@+id/childrensminus"
                 android:layout_width="72dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/minusicon" />
+                android:background="@drawable/minusicon"
+                android:onClick="chilcounterMns"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -138,7 +140,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/plus"
-                android:hapticFeedbackEnabled="false" />
+                android:hapticFeedbackEnabled="false"
+                android:onClick="roomcounterPls"/>
 
             <TextView
                 android:id="@+id/roomscounter"
@@ -153,7 +156,8 @@
                 android:layout_width="72dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/minusicon" />
+                android:background="@drawable/minusicon"
+                android:onClick="roomcounterMns"/>
 
         </LinearLayout>
     </LinearLayout>

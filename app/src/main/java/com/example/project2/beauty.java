@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class beauty extends AppCompatActivity {
     int counter=0;
-    Information info;
+  ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -21,7 +21,7 @@ public class beauty extends AppCompatActivity {
     public void skincare(View view) {
         counter ++;
         if(counter <=10){
-            Toast.makeText(this,info.getEmail().toString() , Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Yes you can come" , Toast.LENGTH_SHORT).show();
         }
         else{
             Toast.makeText(this, "Sorry! its full", Toast.LENGTH_SHORT).show();
