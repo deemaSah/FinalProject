@@ -2,7 +2,9 @@ package com.example.project2;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,10 +23,14 @@ public class searchDialog extends AppCompatDialogFragment  {
     Button childrenplus;
     Button childrenminus;
     int counterchildren = 0;
-    TextView roomcounter;
-    Button roomplus;
-    Button roomminus;
-    int counterroom = 0;
+
+    public final static String SHARED_PREF_NAME="dialog_info";
+    public final static String adultsCounter="adcounter";
+    public final static String childrenCounter="childname";
+
+
+    SharedPreferences sharedPreferences;
+
     @Override
 
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -33,6 +39,7 @@ public class searchDialog extends AppCompatDialogFragment  {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.activity_search_dialog,null);
         builder.setView(view);
+        sharedPreferences= getActivity().getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
         adultscounter =view.findViewById(R.id.adultscounter);
         adultsplus=view.findViewById(R.id.adultsplus);
@@ -43,9 +50,6 @@ public class searchDialog extends AppCompatDialogFragment  {
         childrenplus=view.findViewById(R.id.childrensplus);
         childrenminus=view.findViewById(R.id.childrensminus);
 
-        roomcounter=view.findViewById(R.id.roomscounter);
-        roomplus=view.findViewById(R.id.roomsplus);
-        roomminus=view.findViewById(R.id.roomsminus);
 
         builder.setTitle("Search");
         adultsplus.setOnClickListener(v -> {
@@ -54,11 +58,15 @@ public class searchDialog extends AppCompatDialogFragment  {
         });
         adultsminus.setOnClickListener(v -> {
             counterads--;
+
             adultscounter.setText(Integer.toString(counterads));
             if(counterads<0){
                 counterads=0;
                 adultscounter.setText(Integer.toString(counterads));
             }
+            SharedPreferences.Editor editor =sharedPreferences.edit();
+            editor.putString(adultsCounter, String.valueOf(counterads));
+            editor.apply();
         });
 
         childrenplus.setOnClickListener(v -> {
@@ -72,25 +80,17 @@ public class searchDialog extends AppCompatDialogFragment  {
                 counterchildren=0;
                 childrencounter.setText(Integer.toString(counterchildren));
             }
-        });
-
-        roomplus.setOnClickListener(v -> {
-           counterroom++;
-            roomcounter.setText(Integer.toString( counterroom));
-        });
-        roomminus.setOnClickListener(v -> {
-            counterroom--;
-            roomcounter.setText(Integer.toString(counterroom));
-            if(counterroom<0){
-                counterroom=0;
-                roomcounter.setText(Integer.toString(counterroom));
-            }
+            SharedPreferences.Editor editor =sharedPreferences.edit();
+            editor.putString(childrenCounter, String.valueOf(counterchildren));
+            editor.apply();
         });
 
         builder.setPositiveButton("search", new DialogInterface.OnClickListener() {
             @Override
 
             public void onClick(DialogInterface dialogInterface, int i) {
+                //SharedPreferences sharedPreferences = getActivity().getSharedPreferences(LogInActivity.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+              //  addname(sharedPreferences.getString(LogInActivity.FirstName,null),"yoga");
             }
 
         });

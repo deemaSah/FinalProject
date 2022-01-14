@@ -26,7 +26,6 @@ public class sportActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sport);
     }
@@ -93,7 +92,6 @@ public class sportActivity extends AppCompatActivity {
                 Log.e("TAG", "RESPONSE IS " + response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    // on below line we are displaying a success toast message.
                     Toast.makeText(sportActivity.this,
                             jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
