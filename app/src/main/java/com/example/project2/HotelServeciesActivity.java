@@ -1,13 +1,16 @@
 package com.example.project2;
 
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -23,10 +26,11 @@ import java.util.List;
 
 
 public class HotelServeciesActivity extends AppCompatActivity {
-
+        TextView welcomeuser;
         private List<Hotel> items = new ArrayList<>();
         private RecyclerView recycler;
         private static  final String BASE_URL = "http://10.0.2.2/Mobile/get_items.php";
+        @SuppressLint("SetTextI18n")
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -34,6 +38,9 @@ public class HotelServeciesActivity extends AppCompatActivity {
 
             recycler = findViewById(R.id.hotel_recycler);
 
+            welcomeuser=findViewById(R.id.welcomeuser);
+            SharedPreferences sharedPreferences =getSharedPreferences(LogInActivity.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+            welcomeuser.setText("WELCOME "+sharedPreferences.getString(LogInActivity.FirstName,null));
 
             recycler.setLayoutManager(new LinearLayoutManager(this));
             loadItems();

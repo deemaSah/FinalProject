@@ -1,10 +1,10 @@
 package com.example.project2;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,7 +20,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,12 +32,16 @@ public class LogInActivity extends AppCompatActivity {
     private static  final String URL = "http://10.0.2.2/Mobile/login.php";
     private Button login;
 
+    public final static String SHARED_PREF_NAME="log_user_info";
+    public final static String FirstName="fname";
+    SharedPreferences sharedPreferences;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+        sharedPreferences=getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = password ="";
         emailEd = findViewById(R.id.emailEd);
         passwordEd = findViewById(R.id.passwordEd);
@@ -55,14 +58,18 @@ public class LogInActivity extends AppCompatActivity {
                    public void onResponse(String response) {
                        Toast.makeText(LogInActivity.this, response.toString(), Toast.LENGTH_LONG).show();
                        if (response.contains("success")) {
-                           SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(LogInActivity.this);
-                           SharedPreferences.Editor editor = prefs.edit();
-                           Gson gson = new Gson();
-                           String emailgson= gson.toJson(email);
-                           editor.putString("Email", emailgson);
-                           editor.commit();
+                           SharedPreferences.Editor editor =sharedPreferences.edit();
+                           editor.putString(FirstName,email);
+                           editor.apply();
+
+//                           SharedPreferences prefs = getSharedPreferences("IDvalue", 0);
+//                           SharedPreferences.Editor editor = prefs.edit();
+//                           Gson gson = new Gson();
+//                           String emailgson= gson.toJson(email);
+//                           editor.putString("Email", emailgson);
+//                           editor.commit();
                            Intent intent = new Intent(LogInActivity.this, HotelServeciesActivity.class);
-                           intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                           intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                            startActivity(intent);
 
                        } else if (response.contains("failure")) {

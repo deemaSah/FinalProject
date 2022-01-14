@@ -6,13 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".HotelServeciesActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-
-        android:id="@+id/hotel_recycler"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcomeuser"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/hotel_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="659dp"
+            android:scrollbars="vertical">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
