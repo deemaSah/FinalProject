@@ -12,9 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2">
         <activity
+            android:name=".BookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".offersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckInOut"
+            android:exported="false" />
+        <activity
             android:name=".searchDialog"
             android:exported="true" />
-
         <activity
             android:name=".search"
             android:exported="true" />
@@ -33,6 +41,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

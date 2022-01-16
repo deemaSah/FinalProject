@@ -8,4 +8,11 @@
     <string name="book">Book Now</string>
     <string name="ServicesButton">Services</string>
     <string name="offers">Offers</string>
+    <string name="checkIn">Check In</string>
+    <string name="checkOut">Check Out</string>
+    <string name="CardNum">Card Number</string>
+    <string name="cardCode">CVC Code</string>
+    <string name="next">NEXT</string>
+    <string name="bookingBtn">Booking</string>
+    <string name="booked">BOOKED</string>
 </resources>

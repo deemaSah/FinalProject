@@ -76,7 +76,8 @@
                 android:id="@+id/offersbutton"
                 style="@style/ButtonStyle"
                 android:background="@drawable/ic_baseline_flight_24"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:onClick="next"/>
 
             <TextView
                 android:id="@+id/offertextView"
@@ -120,7 +121,8 @@
                 android:id="@+id/BookButton"
                 style="@style/ButtonStyle"
                 android:background="@drawable/ic_baseline_calendar_month_24"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:onClick="getBookingActivity"/>
 
             <TextView
                 android:id="@+id/servicesTextView"
