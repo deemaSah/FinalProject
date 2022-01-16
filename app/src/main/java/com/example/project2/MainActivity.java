@@ -1,9 +1,10 @@
 package com.example.project2;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,17 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void LogInbtn(View view) {
         Intent intent2 = new Intent(this,LogInActivity.class);
-        startActivity(intent2);
-    }
-
-
-    public void next(View view) {
-        Intent intent2 = new Intent(this,offersActivity.class);
-        startActivity(intent2);
-    }
-
-    public void getBookingActivity(View view) {
-        Intent intent2 = new Intent(this,BookingActivity.class);
         startActivity(intent2);
     }
 }

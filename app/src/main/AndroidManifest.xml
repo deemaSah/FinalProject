@@ -8,20 +8,21 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2">
         <activity
-            android:name=".BookingActivity"
-            android:exported="false" />
+            android:name=".sportActivity"
+            android:exported="true" />
         <activity
-            android:name=".offersActivity"
-            android:exported="false" />
+            android:name=".FoodActivity"
+            android:exported="true" />
         <activity
-            android:name=".CheckInOut"
-            android:exported="false" />
+            android:name=".beauty"
+            android:exported="true" />
         <activity
-            android:name=".searchDialog"
+            android:name=".HotelServeciesActivity"
             android:exported="true" />
         <activity
             android:name=".search"
@@ -31,7 +32,7 @@
             android:exported="false" />
         <activity
             android:name=".LogInActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -42,9 +43,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>
