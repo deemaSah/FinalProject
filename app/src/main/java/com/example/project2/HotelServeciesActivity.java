@@ -70,7 +70,7 @@ public class HotelServeciesActivity extends AppCompatActivity {
 
                             }
 
-                            CaptionedImagesAdapter adapter = new CaptionedImagesAdapter(HotelServeciesActivity.this, items);
+                            RoomsAdapter adapter = new RoomsAdapter(HotelServeciesActivity.this, items);
                             recycler.setAdapter(adapter);
 
                         }

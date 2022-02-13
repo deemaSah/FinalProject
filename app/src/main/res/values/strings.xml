@@ -15,4 +15,8 @@
     <string name="next">NEXT</string>
     <string name="bookingBtn">Booking</string>
     <string name="booked">BOOKED</string>
+    <string name="logOutBtn">Log Out</string>
+    <string name="cancelbtn">CANCEL</string>
+    <string name="statusbtn">Room</string>
+    <string name="name">Name</string>
 </resources>

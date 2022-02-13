@@ -1,11 +1,10 @@
 package com.example.project2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -25,33 +24,22 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class offersActivity extends AppCompatActivity {
-    private List<offers> items = new ArrayList<>();
+public class roomStatusActivity extends AppCompatActivity {
+    private List<Rooms> items = new ArrayList<>();
     private RecyclerView recycler;
-    private static  final String BASE_URL = "http://10.0.2.2:80/Mobile/offersItem.php";
+    private static  final String BASE_URL = "http://10.0.2.2:80/Mobile/rooms.php";
     private RequestQueue queue;
     static ArrayList<bookedRoom> rooms = new ArrayList<>();
-    static SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_offers);
+        setContentView(R.layout.activity_room_status);
         recycler=findViewById(R.id.roomsStatus_recycler);
-        recycler.setLayoutManager(new LinearLayoutManager(this));
-        queue = Volley.newRequestQueue(offersActivity.this);
-
-        sharedPreferences =getSharedPreferences(LogInActivity.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if(!sharedPreferences.equals(null)) {
-            String email = sharedPreferences.getString(LogInActivity.FirstName, "");
-            email = "deema";
-            getBookedRoom(email);
-        }
+        recycler.setLayoutManager(new GridLayoutManager(this,2));
+        queue = Volley.newRequestQueue(roomStatusActivity.this);
+        getBookedRoom();
         loadItems();
-        //*****************************************
-
-
-
 
     }
     private void loadItems() {
@@ -60,7 +48,10 @@ public class offersActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
+
                         try {
+
                             JSONArray array = new JSONArray(response);
                             for (int i = 0; i < array.length(); i++) {
 
@@ -68,12 +59,12 @@ public class offersActivity extends AppCompatActivity {
 
                                 String id = object.getString("id");
                                 String imgUrl = object.getString("imgUrl");
-                                String caption = object.getString("caption");
-                                String oldPrice = object.getString("oldPrice");
-                                String newPrice = object.getString("newPrice");
+                                String description = object.getString("description");
+                                String price = object.getString("price");
+                                String pNum = object.getString("pNum");
 
 
-                                offers obj = new offers(id,imgUrl, caption, oldPrice, newPrice);
+                                Rooms obj = new Rooms(id,imgUrl,price,pNum, description);
                                 items.add(obj);
                             }
 
@@ -82,25 +73,25 @@ public class offersActivity extends AppCompatActivity {
                         }
 
 
-                        offersAdapter adapter = new offersAdapter(offersActivity.this,
+                        roomStatusAdapter adapter = new roomStatusAdapter(roomStatusActivity.this,
                                 items,rooms);
                         recycler.setAdapter(adapter);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(offersActivity.this, error.toString(),Toast.LENGTH_LONG).show();
+                Toast.makeText(roomStatusActivity.this, error.toString(),Toast.LENGTH_LONG).show();
 
             }
 
 
         });
 
-        Volley.newRequestQueue(offersActivity.this).add(stringRequest);
+        Volley.newRequestQueue(roomStatusActivity.this).add(stringRequest);
 
     }
-    public void getBookedRoom(String userName) {
-        String url = "http://10.0.2.2:80/Mobile/bookedRooms.php?userName=" + userName;
+    public void getBookedRoom() {
+        String url = "http://10.0.2.2:80/Mobile/allBookedRooms.php";
 
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url,
                 null, new Response.Listener<JSONArray>() {
@@ -121,7 +112,7 @@ public class offersActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Toast.makeText(offersActivity.this, error.toString(),
+                Toast.makeText(roomStatusActivity.this, error.toString(),
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -131,4 +122,5 @@ public class offersActivity extends AppCompatActivity {
 
 
     }
+
 }

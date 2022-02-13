@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -23,6 +24,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,14 +54,24 @@ public class CheckInOut extends AppCompatActivity {
     TextView date2;
     EditText cNum;
     EditText cvcCode;
+    EditText name;
     Button calendar1;
     Button calendar2;
     DatePickerDialog.OnDateSetListener setListener;
     DatePickerDialog.OnDateSetListener setListener2;
     private Dialog dialog;
     private Button next;
+    LinearLayout layout1;
+    LinearLayout layout2;
+    LinearLayout layout3;
+    TextView textView1;
+    TextView textView2;
+    TextView textView3;
+    String email="";
 
 
+
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +82,24 @@ public class CheckInOut extends AppCompatActivity {
         calendar2 = findViewById(R.id.calendarbtn2);
         cNum=findViewById(R.id.cNum);
         cvcCode=findViewById(R.id.cvc);
+        name=findViewById(R.id.name);
+        layout1=findViewById(R.id.cNumLayout);
+        layout2=findViewById(R.id.cvcLayout);
+        layout3=findViewById(R.id.nameLayout);
+        textView1=findViewById(R.id.cNumtext);
+        textView2=findViewById(R.id.cvcText);
+        textView3=findViewById(R.id.nameText);
+         email="admindeema";
+        if(email.contains("admin"))
+        {
+            layout1.setVisibility(8);
+            layout2.setVisibility(8);
+            layout3.setVisibility(0);
+            textView1.setVisibility(8);
+            textView2.setVisibility(8);
+            textView3.setVisibility(0);
+        }
+
 
         //********************************************
          calendarDialog();
@@ -164,7 +194,11 @@ public class CheckInOut extends AppCompatActivity {
                 String dateOut=date2.getText().toString();
                 String cardNum=cNum.getText().toString();
                 String cvc = cvcCode.getText().toString();
-                String userName="deema";
+                String userName="admindeema";
+                if(email.contains("admin")){
+                    userName=name.getText().toString();
+                }
+
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(CheckInOut.this);
                 SharedPreferences.Editor editor = prefs.edit();
                 String data = prefs.getString("RoomID", "");
@@ -173,8 +207,14 @@ public class CheckInOut extends AppCompatActivity {
                 addBook(dateIN,dateOut,cardNum,cvc,userName,roomId);
                 editor.remove("RoomID");
                 editor.apply();
-                Intent intent = new Intent(CheckInOut.this,offersActivity.class);
-                startActivity(intent);
+                if(email.contains("admin"))
+                {
+                    Intent intent = new Intent(CheckInOut.this, roomStatusActivity.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(CheckInOut.this, offersActivity.class);
+                    startActivity(intent);
+                }
                 dialog.dismiss();
 
             }
@@ -191,7 +231,7 @@ public class CheckInOut extends AppCompatActivity {
     //***************************************************************************
 
     private void addBook(String dateIn, String dateOut, String cardNum,String cvc,String userName,String roomId){
-        String url = "http://10.0.2.2:80/proj2/checkInOut.php";
+        String url = "http://10.0.2.2:80/Mobile/checkInOut.php";
         RequestQueue queue = Volley.newRequestQueue(CheckInOut.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
@@ -242,50 +282,7 @@ public class CheckInOut extends AppCompatActivity {
 
 
     //***********************************************************************
-    /*public void click(){
-        Button Okay = dialog.findViewById(R.id.btn_okay);
-        Button Cancel = dialog.findViewById(R.id.btn_cancel);
 
-     Okay.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String restUrl = "http://10.0.2.2:80/proj2/checkInOut.php";
-            if (ContextCompat.checkSelfPermission(CheckInOut.this,
-                    Manifest.permission.INTERNET)
-                    != PackageManager.PERMISSION_GRANTED) {
-
-                ActivityCompat.requestPermissions(CheckInOut.this,
-                        new String[]{Manifest.permission.INTERNET},
-                        123);
-
-            } else{
-            SendPostRequest runner = new SendPostRequest();
-            runner.execute(restUrl);
-
-
-            }
-            Intent intent = new Intent(CheckInOut.this,MainActivity.class);
-            startActivity(intent);
-            dialog.dismiss();
-        }
-    });
-
-        Cancel.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(CheckInOut.this,MainActivity.class);
-            startActivity(intent);
-            dialog.dismiss();
-        }
-    });
-
-
-
-}*/
-    //***********************************************************************
-
-
-    //***********************************************************************
 
 
 

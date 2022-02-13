@@ -16,13 +16,13 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CaptionedImagesAdapter
-        extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder>{
+public class searchAdapter
+        extends RecyclerView.Adapter<searchAdapter.ViewHolder>{
     private Context context;
     private List<Rooms> items;
 
 
-    public CaptionedImagesAdapter(Context context, List<Rooms> items){
+    public searchAdapter(Context context, List<Rooms> items){
         this.context = context;
         this.items = items;
     }

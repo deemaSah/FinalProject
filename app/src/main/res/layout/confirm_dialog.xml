@@ -16,7 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
-        android:text="You must log in first :)"
+        android:text="Are you sure to cancel the reservation?"
         android:textAlignment="center"
         android:textColor="#000000" />
 
@@ -27,7 +27,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/cbtn"
+            android:id="@+id/Cbutton"
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -37,12 +37,12 @@
             android:background="#4DC3D8EA"
             android:backgroundTint="#779EAF"
             android:stateListAnimator="@null"
-            android:text="@string/cancelbtn"
+            android:text="Cancel"
             android:textAllCaps="false"
             android:textColor="@android:color/holo_blue_dark"/>
 
         <Button
-            android:id="@+id/okaybtn"
+            android:id="@+id/yesbtn"
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -52,7 +52,7 @@
             android:background="#4DC3D8EA"
             android:backgroundTint="#779EAF"
             android:stateListAnimator="@null"
-            android:text="Ok"
+            android:text="Yes"
             android:textAllCaps="false"
             android:textColor="@android:color/holo_blue_dark" />
     </LinearLayout>

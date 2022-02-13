@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.project2">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,6 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2">
+        <activity
+            android:name=".roomStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchRoomActivity"
+            android:exported="false" />
         <activity
             android:name=".sportActivity"
             android:exported="true" />
@@ -32,6 +39,15 @@
             android:exported="false" />
         <activity
             android:name=".LogInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BookingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".offersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CheckInOut"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
