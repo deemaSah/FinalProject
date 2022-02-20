@@ -14,6 +14,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2">
         <activity
+            android:name=".weatherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminEnteraement"
+            android:exported="false" />
+        <activity
+            android:name=".AdminSport"
+            android:exported="false" />
+        <activity
+            android:name=".AdminFood"
+            android:exported="false" />
+        <activity
+            android:name=".AdminBeauty"
+            android:exported="false" />
+        <activity
+            android:name=".AdminServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkinoutActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".entertaement"
+            android:exported="false" />
+        <activity
+            android:name=".Tanks"
+            android:exported="false" />
+        <activity
+            android:name=".Pool"
+            android:exported="false" />
+        <activity
+            android:name=".Bahamas"
+            android:exported="false" />
+        <activity android:name=".Sign_Up" />
+        <activity
             android:name=".roomStatusActivity"
             android:exported="false" />
         <activity
@@ -30,9 +64,6 @@
             android:exported="true" />
         <activity
             android:name=".HotelServeciesActivity"
-            android:exported="true" />
-        <activity
-            android:name=".search"
             android:exported="true" />
         <activity
             android:name=".Gallery"

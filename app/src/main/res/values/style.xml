@@ -40,4 +40,59 @@
         <item name="android:textColorSecondary">@android:color/darker_gray</item>
     </style>
 
+
+    <style name="CardStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="LinearLayoutCardStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">182dp</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="textViewCardStyle">
+        <item name="android:layout_width">115dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="buttonCardStyle">
+        <item name="android:layout_width">115dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="GridLayoutCardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:columnCount">2</item>
+        <item name="android:rowCount">3</item>
+    </style>
+
+    <style name="EditTextLogin">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">#6DDCB1B1</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/berkshire_swash</item>
+        <item name="android:textColorHint">#B7000000</item>
+    </style>
+
 </resources>

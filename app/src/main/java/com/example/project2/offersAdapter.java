@@ -70,7 +70,16 @@ public class offersAdapter extends RecyclerView.Adapter<offersAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         final offers offers = items.get(position);
         CardView cardView = holder.cardView;
-
+        String email ="";
+        SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(context);
+        email = prefs1.getString("USERNAME", "");
+        if ((email.equals("")))
+        {
+            LinearLayout layout = (LinearLayout) cardView.findViewById(R.id.booked);
+            layout.setVisibility(8);
+            LinearLayout layout2 = (LinearLayout) cardView.findViewById(R.id.bokinglayout);
+            layout2.setVisibility(0);
+        }
         for (int i=0;i<rooms.size();i++) {
             if (offers.getId().equals(rooms.get(i).getIdRoom())) {
 
@@ -80,6 +89,10 @@ public class offersAdapter extends RecyclerView.Adapter<offersAdapter.ViewHolder
                 layout2.setVisibility(8);
             }
         }
+        for (int i=0;i<rooms.size();i++) {
+
+        }
+
         ImageView imageView = (ImageView) cardView.findViewById(R.id.image);
         Glide.with(context).load(offers.getImgUrl()).into(imageView);
         TextView txt3 = (TextView) cardView.findViewById(R.id.caption);
@@ -102,6 +115,7 @@ public class offersAdapter extends RecyclerView.Adapter<offersAdapter.ViewHolder
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         Button Okay = dialog.findViewById(R.id.okaybtn);
+        Button cancel = dialog.findViewById(R.id.cbtn);
         Okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,18 +124,20 @@ public class offersAdapter extends RecyclerView.Adapter<offersAdapter.ViewHolder
                 dialog.dismiss();
             }
         });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
 
         cardView.findViewById(R.id.bookingbtn).setOnClickListener( new View.OnClickListener(){
 
             @Override
             public void onClick(View v){
-                String email ="123";
-                SharedPreferences sharedPreferences =context.getSharedPreferences(LogInActivity.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-
-                if(!sharedPreferences.equals(null))
-                {
-                    email = sharedPreferences.getString(LogInActivity.FirstName, "");
-                }
+                String email ="";
+                SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(context);
+                 email = prefs1.getString("USERNAME", "");
                 if (email.equals("")){
                     dialog.show();
 

@@ -16,50 +16,35 @@
     <TextView
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_gravity="center|right"
+        android:layout_gravity="center|end"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/berkshire_swash"
         android:gravity="center"
-        android:text="LogIn "
+        android:text="@string/logIn"
         android:textColor="#A9121111"
         android:textSize="24sp" />
 
     <EditText
+        style="@style/EditTextLogin"
         android:id="@+id/emailEd"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:background="#6DDCB1B1"
-        android:ems="10"
-        android:fontFamily="@font/berkshire_swash"
-        android:hint="Name"
+        android:hint="@string/Name"
         android:inputType="textPersonName"
-        android:textColorHint="#B7000000" />
+        />
 
     <EditText
+        style="@style/EditTextLogin"
         android:id="@+id/passwordEd"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:background="#6DDCB1B1"
-        android:ems="10"
-        android:fontFamily="@font/berkshire_swash"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColorHint="#B7000000" />
+        android:hint="@string/Password"
+        />
 
     <Button
         android:id="@+id/login"
+        style="@style/EditTextLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="8dp"
-        android:background="#70DCB1B1"
-        android:ems="10"
-        android:fontFamily="@font/berkshire_swash"
         android:inputType="textPersonName"
-        android:text="Log in"
-        android:onClick="login"/>
+        android:text="@string/logIn" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -72,22 +57,24 @@
             android:layout_height="match_parent"
             android:background="#68978E8E"
             android:gravity="center"
-            android:text="Already have an account "
+            android:text="@string/Makeanaccount"
             android:textColor="#B7000000"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/reserve"
             android:layout_width="85dp"
             android:layout_height="30dp"
             android:layout_weight="1"
             android:gravity="center|top|left"
             android:text="SignUp"
             android:textColor="#C4000000"
+            android:onClick="toSignUp"
             android:textSize="10sp"
             android:textStyle="bold|italic"
             app:strokeColor="#00FFFFFF" />
+
     </LinearLayout>
 
 </LinearLayout>

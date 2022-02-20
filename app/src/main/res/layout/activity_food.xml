@@ -14,207 +14,122 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:background="#00321818"
-        android:text="Food Services"
+        android:text="@string/FoodServices"
         android:textColor="#B4201E1E"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/title_view"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
-        android:columnCount="2"
-        android:rowCount="3">
+        style="@style/GridLayoutCardStyle"
+        android:layout_below="@+id/title_view">
 
         <androidx.cardview.widget.CardView
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CardStyle"
             android:layout_row="0"
-            android:layout_rowWeight="1"
             android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+            <LinearLayout style="@style/LinearLayoutCardStyle">
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/breakfast"/>
+                    android:src="@drawable/breakfast" />
 
                 <TextView
-                    android:layout_width="115dp"
-                    android:layout_height="30dp"
-                    android:text=" Break Fast Part"
-                    android:textAlignment="center"
-                    android:textStyle="bold" />
+                    style="@style/textViewCardStyle"
+                    android:text="@string/BreakFastPart" />
+
                 <Button
-                    android:layout_width="115dp"
-                    android:layout_height="30dp"
+                    style="@style/buttonCardStyle"
                     android:onClick="breakfast"
-                    android:text="Can i come?"
-                    android:textAlignment="center"
-                    android:textSize="10dp"
-                    android:textStyle="bold" />
+                    android:text="@string/come" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CardStyle"
             android:layout_row="0"
-            android:layout_rowWeight="1"
             android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+            <LinearLayout style="@style/LinearLayoutCardStyle">
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/maindish"/>
+                    android:src="@drawable/maindish" />
 
                 <TextView
-                    android:layout_width="115dp"
-                    android:layout_height="30dp"
-                    android:text="Part  "
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    />
+                    style="@style/textViewCardStyle"
+                    android:text="@string/MainDishPart" />
 
                 <Button
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
+                    style="@style/buttonCardStyle"
                     android:onClick="maindish"
-                    android:text=" come?"
-                    android:textAlignment="center"
-                    android:textSize="10dp"
-                    android:textStyle="bold" />
+                    android:text="@string/come" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CardStyle"
             android:layout_row="1"
-            android:layout_rowWeight="1"
             android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+            <LinearLayout style="@style/LinearLayoutCardStyle">
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/appetizers"/>
+                    android:src="@drawable/appetizers" />
 
                 <TextView
-                    android:layout_width="115dp"
-                    android:layout_height="30dp"
-                    android:text=" Appetizers Part "
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:onClick="appetizers"/>
+                    style="@style/textViewCardStyle"
+                    android:text="@string/AppetizersPart" />
+
                 <Button
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
+                    style="@style/buttonCardStyle"
                     android:onClick="appetizers"
-                    android:text="Can i com?"
-                    android:textAlignment="center"
-                    android:textSize="10dp"
-                    android:textStyle="bold" />
+                    android:text="@string/come" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CardStyle"
             android:layout_row="1"
-            android:layout_rowWeight="1"
             android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+            <LinearLayout style="@style/LinearLayoutCardStyle">
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/snaks"/>
+                    android:src="@drawable/snaks" />
+
                 <TextView
-                    android:layout_width="115dp"
-                    android:layout_height="30dp"
-                    android:text="Snaks Part "
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    />
+                    style="@style/textViewCardStyle"
+                    android:text="@string/SnacksPart" />
+
                 <Button
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
+                    style="@style/buttonCardStyle"
                     android:onClick="snaks"
-                    android:text="Can i come?"
-                    android:textAlignment="center"
-                    android:textSize="10dp"
-                    android:textStyle="bold" />
+                    android:text="@string/come" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

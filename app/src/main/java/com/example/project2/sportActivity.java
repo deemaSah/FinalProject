@@ -84,7 +84,7 @@ public class sportActivity extends AppCompatActivity {
 
     }
     private void addname(String email, String serviceName){
-        String url = "http://10.0.2.2/Mobile/Add_Name.php";
+        String url = "http://10.0.2.2/Mobile/Add_SportName.php";
         RequestQueue queue = Volley.newRequestQueue(sportActivity.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override

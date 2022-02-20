@@ -58,6 +58,10 @@ public class RoomsAdapter extends RecyclerView.Adapter<RoomsAdapter.ViewHolder>{
                 Intent intent = new Intent(context, sportActivity.class);
                 context.startActivity(intent);
             }
+            if(position==3) {
+                Intent intent = new Intent(context,entertaement.class);
+                context.startActivity(intent);
+            }
         });
     }
 

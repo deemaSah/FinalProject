@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/blue"
+    android:layout_height="match_parent">
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="2"
+        app:sliderStartAutoCycle="true" />
+
+    <TextView
+        android:id="@+id/Des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_slider"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/allan"
+        android:text="The most beautiful hot and cold pools for swimming of all times"
+        android:textColor="#D6D6D6"
+        android:textSize="28sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Des"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/allan"
+        android:text="Don't waste your time, register now!"
+        android:textColor="#D5D5D5"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Name"
+        android:layout_below="@id/Des"
+        android:layout_marginTop="90dp"
+        android:textColor="#000C4C"
+        android:fontFamily="@font/allan"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/RegNamet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Des"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="81dp"
+        android:layout_toRightOf="@id/name"
+        android:hint="ENTER YOUR NAME"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#FF0000"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/btnOne_C"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Des"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="77dp"
+        android:layout_toRightOf="@id/RegNamet"
+        android:background="@color/purple_700"
+        android:fontFamily="@font/caveat_brush"
+        android:onClick="tanBtn"
+        android:scrollbarStyle="outsideOverlay"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="REGISTER"
+        android:textColor="#FF3D00"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+
+</RelativeLayout>
+

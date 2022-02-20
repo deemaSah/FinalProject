@@ -89,7 +89,8 @@ public class CheckInOut extends AppCompatActivity {
         textView1=findViewById(R.id.cNumtext);
         textView2=findViewById(R.id.cvcText);
         textView3=findViewById(R.id.nameText);
-         email="admindeema";
+        SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(CheckInOut.this);
+        email = prefs1.getString("USERNAME", "");
         if(email.contains("admin"))
         {
             layout1.setVisibility(8);
@@ -194,7 +195,7 @@ public class CheckInOut extends AppCompatActivity {
                 String dateOut=date2.getText().toString();
                 String cardNum=cNum.getText().toString();
                 String cvc = cvcCode.getText().toString();
-                String userName="admindeema";
+                String userName="";
                 if(email.contains("admin")){
                     userName=name.getText().toString();
                 }
@@ -271,7 +272,11 @@ public class CheckInOut extends AppCompatActivity {
                 params.put("dateOut", dateOut);
                 params.put("cardnum", cardNum);
                 params.put("cvcCode", cvc);
-                params.put("userName", userName);
+                if(email.contains("admin")){
+                    params.put("userName", userName);
+                }else {
+                    params.put("userName", email);
+                }
                 params.put("idRoom", roomId);
 
                 return params;

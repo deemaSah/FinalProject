@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -31,7 +32,7 @@ public class offersActivity extends AppCompatActivity {
     private static  final String BASE_URL = "http://10.0.2.2:80/Mobile/offersItem.php";
     private RequestQueue queue;
     static ArrayList<bookedRoom> rooms = new ArrayList<>();
-    static SharedPreferences sharedPreferences;
+    static String email="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +42,10 @@ public class offersActivity extends AppCompatActivity {
         recycler.setLayoutManager(new LinearLayoutManager(this));
         queue = Volley.newRequestQueue(offersActivity.this);
 
-        sharedPreferences =getSharedPreferences(LogInActivity.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if(!sharedPreferences.equals(null)) {
-            String email = sharedPreferences.getString(LogInActivity.FirstName, "");
-            email = "deema";
+        SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(offersActivity.this);
+        email = prefs1.getString("USERNAME", "null");
             getBookedRoom(email);
-        }
-        loadItems();
+            loadItems();
         //*****************************************
 
 
@@ -100,6 +98,10 @@ public class offersActivity extends AppCompatActivity {
 
     }
     public void getBookedRoom(String userName) {
+        for (int i=0;i<rooms.size();i++)
+        {
+            rooms.remove(i);
+        }
         String url = "http://10.0.2.2:80/Mobile/bookedRooms.php?userName=" + userName;
 
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url,

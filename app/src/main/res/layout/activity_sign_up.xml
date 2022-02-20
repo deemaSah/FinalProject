@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/first"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Sign_Up">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/archivo_black"
+        android:shadowColor="@color/black"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="6"
+        android:text="@string/sign_up_page"
+        android:textColor="@color/white"
+
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/chewy"
+        android:text="@string/name2"
+        android:textColor="#202020"
+        android:textSize="27sp" />
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chewy"
+        android:text="@string/password"
+        android:textColor="#070707"
+        android:textSize="27sp"/>
+
+
+    <EditText
+        android:id="@+id/Nametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="290dp"
+        android:layout_toRightOf="@id/textView"
+        android:ems="10"
+        android:hint="ENTER YOUR NAME"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+
+
+
+
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/Passwordtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="38dp"
+        android:layout_toRightOf="@id/textView2"
+        android:ems="10"
+        android:hint="ENTER YOUR PASSWORD"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="228dp"
+        android:layout_height="36dp"
+        android:layout_below="@id/button"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/chewy"
+        android:text="@string/if_you_don_t_have_acc"
+        android:textColor="#FF0000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="43dp"
+        android:fontFamily="@font/audiowide"
+        android:onClick="btnAddOnClick"
+        android:text="@string/sig_up"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/GoToLogin"
+        android:onClick="GoToLoginOnClick"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_marginLeft="-29dp"
+        android:layout_marginTop="27dp"
+        android:layout_toRightOf="@id/button"
+        android:text="@string/login"
+        android:textSize="20dp"
+
+        tools:ignore="OnClick" />
+
+</RelativeLayout>

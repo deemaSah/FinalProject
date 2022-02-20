@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -31,6 +32,7 @@ public class BookingActivity extends AppCompatActivity {
         private static final String BASE_URL = "http://10.0.2.2:80/Mobile/rooms.php";
         FloatingActionButton searchBtn;
         private Dialog dialog;
+        private Button btn;
 
 
     @Override
@@ -39,14 +41,15 @@ public class BookingActivity extends AppCompatActivity {
             setContentView(R.layout.activity_booking);
             searchBtn=findViewById(R.id.searchBtn);
             recycler = findViewById(R.id.room_recycler);
+
             recycler.setLayoutManager(new LinearLayoutManager(this));
             loadItems();
             searchBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(BookingActivity.this, searchDialog.class);
+                        searchDialog searchsDialog = new searchDialog(BookingActivity.this);
+                        searchsDialog.show(getSupportFragmentManager(),"searchDialog");
 
-                    BookingActivity.this.startActivity(intent);
                 }
             });
         }

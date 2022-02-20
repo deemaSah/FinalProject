@@ -83,7 +83,7 @@ public class beauty extends AppCompatActivity {
         }
     }
     private void addname(String email, String serviceName){
-        String url = "http://10.0.2.2/Mobile/Add_Name.php";
+        String url = "http://10.0.2.2/Mobile/Add_BeautyName.php";
         RequestQueue queue = Volley.newRequestQueue(beauty.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override

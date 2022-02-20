@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -64,6 +65,8 @@ public class LogInActivity extends AppCompatActivity {
                            editor.putString(FirstName,email);
                            editor.apply();
 
+
+
 //                           SharedPreferences prefs = getSharedPreferences("IDvalue", 0);
 //                           SharedPreferences.Editor editor = prefs.edit();
 //                           Gson gson = new Gson();
@@ -71,8 +74,14 @@ public class LogInActivity extends AppCompatActivity {
 //                           editor.putString("Email", emailgson);
 //                           editor.commit();
 
-                           Intent intent = new Intent(LogInActivity.this, HotelServeciesActivity.class);
+                           Intent intent = new Intent(LogInActivity.this, MainActivity.class);
                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                           SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(LogInActivity.this);
+                           SharedPreferences.Editor editor2 = prefs.edit();
+                           editor2.putString("USERNAME", email);
+                           editor2.commit();
+
                            startActivity(intent);
 
                        } else if (response.contains("failure")) {
@@ -115,5 +124,8 @@ public class LogInActivity extends AppCompatActivity {
     }
 
 
-
+    public void toSignUp(View view) {
+        Intent intent = new Intent(LogInActivity.this,Sign_Up.class);
+        startActivity(intent);
+    }
 }

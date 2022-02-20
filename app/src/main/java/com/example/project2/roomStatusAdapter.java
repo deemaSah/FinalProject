@@ -22,7 +22,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -65,7 +64,7 @@ public class roomStatusAdapter extends RecyclerView.Adapter<roomStatusAdapter.Vi
         String userName = " ";
         boolean flag = false;
         CardView cardView = holder.cardView;
-        TextView id = (TextView) cardView.findViewById(R.id.roomId);
+        TextView id = (TextView) cardView.findViewById(R.id.roomID);
         TextView name = (TextView) cardView.findViewById(R.id.userName);
         Button cancel = (Button) cardView.findViewById(R.id.cancelBtn);
         Button booking = (Button) cardView.findViewById(R.id.bookingbutton);
@@ -104,7 +103,7 @@ public class roomStatusAdapter extends RecyclerView.Adapter<roomStatusAdapter.Vi
             }
         });
         //**************************************************************************************
-        cardView.findViewById(R.id.cancelBtn).setOnClickListener( new View.OnClickListener(){
+        cardView.findViewById(R.id.cancelBtn).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 //********************************************************

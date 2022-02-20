@@ -19,4 +19,33 @@
     <string name="cancelbtn">CANCEL</string>
     <string name="statusbtn">Room</string>
     <string name="name">Name</string>
+    <string name="name2">Name</string>
+    <string name="password">Password</string>
+    <string name="sign_up_page">SIGN UP PAGE</string>
+    <string name="sig_up">Sig Up</string>
+    <string name="if_you_don_t_have_acc">IF YOU DON\'T HAVE ACC</string>
+    <string name="login">Login</string>
+    <string name="enjoy_your_view_with_the_rarest_types_of_fish_and_the_most_beautiful_and_largest_aquariums_in_the_world">Enjoy your view with the rarest types of fish and the most beautiful and largest aquariums in the world</string>
+    <string name="BeautyServices">Beauty Care Services</string>
+    <string name="NailsPart">Nails Care Part</string>
+    <string name="come">Can i come?</string>
+    <string name="MakeUpPart">Make Up Part</string>
+    <string name="HairPart">HairPart</string>
+    <string name="SkinCarePart">Skin Care Part</string>
+    <string name="FoodServices">Food Services</string>
+    <string name="BreakFastPart">BreakFast Part</string>
+    <string name="MainDishPart">Main Dish Part</string>
+    <string name="AppetizersPart">Appetizers Part</string>
+    <string name="SnacksPart">Snacks Part</string>
+    <string name="SportCareServices">Sport Care Services</string>
+    <string name="YogaPart">Yoga Part</string>
+    <string name="FootBallPart">FootBall Part</string>
+    <string name="TennisPart">Tennis Part</string>
+    <string name="MarathonPart">Marathon Part</string>
+    <string name="Makeanaccount">Make an account</string>
+    <string name="Name">Name</string>
+    <string name="Password">Password</string>
+    <string name="Weather">Weather</string>
+    <string name="sighnwithgoogle">Sign in by gmail</string>
+
 </resources>

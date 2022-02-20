@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather"
+    android:orientation="vertical"
+    tools:context=".weatherActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="64dp" />
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="188dp"
+            android:layout_height="68dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="120dp"
+            android:background="#00321818"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="@string/Weather"
+            android:textAlignment="center"
+            android:textColor="#B4201E1E"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_getCityID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+
+                android:backgroundTint="#6BF4FF9E"
+                android:onClick="btn_getCityID_click"
+                android:text="City ID" />
+
+            <Button
+                android:id="@+id/btn_weather_cityID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="1dp"
+                android:backgroundTint="#6BF4FF9E"
+                android:onClick="btn_weather_cityID_click"
+                android:text="Weather by ID" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Enter Country name"
+
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="377dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="#A69FCADD"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="415dp">
+
+        <ListView
+            android:id="@+id/lst"
+            style="@style/EditTextLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="#A69FCADD" />
+    </LinearLayout>
+
+</LinearLayout>

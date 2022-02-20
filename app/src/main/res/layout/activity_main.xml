@@ -172,11 +172,12 @@
             android:visibility="gone">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/admservice"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="@drawable/ic_baseline_room_service_24"
-                android:backgroundTint="#cdfcff" />
+                android:backgroundTint="#cdfcff"
+                android:onClick="gerAdminService"/>
 
             <TextView
                 android:id="@+id/textView11"
@@ -221,7 +222,8 @@
                 android:id="@+id/servicesbutton"
                 style="@style/ButtonStyle"
                 android:background="@drawable/ic_baseline_room_service_24"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:onClick="getServiceActivity"/>
 
             <TextView
                 android:id="@+id/textView"
@@ -229,6 +231,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ServicesButton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weatherLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/weatherbtn"
+                style="@style/ButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/ic_baseline_wb_sunny_24"
+                android:onClick="getWeatherActivity"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/weatherText"
+                style="@style/firstUIStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Weather" />
         </LinearLayout>
 
     </LinearLayout>

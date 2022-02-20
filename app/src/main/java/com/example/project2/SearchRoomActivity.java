@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -24,18 +27,24 @@ public class SearchRoomActivity extends AppCompatActivity {
 
     private List<Rooms> items = new ArrayList<>();
     private RecyclerView recycler;
-    private static String Pnum ="3";
-    private static final String BASE_URL = "http://10.0.2.2:80/Mobile/search.php?pNum="+Pnum;
+    static SharedPreferences sharedPreferences;
+    private static String Pnum ;
+    private static  String BASE_URL ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
-
         recycler = findViewById(R.id.room_recycler);
-
-
         recycler.setLayoutManager(new LinearLayoutManager(this));
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(SearchRoomActivity.this);
+        SharedPreferences.Editor editor = prefs.edit();
+         Pnum = prefs.getString("COUNTER", "");
+        editor.remove("COUNTER");
+        editor.apply();
+        editor.commit();
+
+        BASE_URL = "http://10.0.2.2:80/Mobile/search.php?pNum="+Pnum;
         loadItems();
     }
 
