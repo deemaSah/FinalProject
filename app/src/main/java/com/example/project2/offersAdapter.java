@@ -169,7 +169,7 @@ public class offersAdapter extends RecyclerView.Adapter<offersAdapter.ViewHolder
                 dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 dialog.setCancelable(false);
                 dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-                Button Okay = dialog.findViewById(R.id.yesbtn);
+                Button Okay = dialog.findViewById(R.id.errorbtn);
                 Button cancel2 = dialog.findViewById(R.id.Cbutton);
                 Okay.setOnClickListener(new View.OnClickListener() {
                     @Override

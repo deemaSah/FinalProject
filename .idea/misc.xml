@@ -8,29 +8,54 @@
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/drawable/custom_dialog_background.xml" value="0.1" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/drawable/custom_dialog_layout.xml" value="0.1" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/drawable/cutom_bookingbtn.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/font/.xml" value="0.1" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/font/aclonica.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/font/allan.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/font/amarante.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_admin_beauty.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_admin_enteraement.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_admin_food.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_admin_services.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_admin_sport.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_bahamas.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_beauty.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_booking.xml" value="0.22" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_check_in_out.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_checkinout2.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_entertaement.xml" value="0.25181159420289856" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_food.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_gallery.xml" value="0.22" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_hotel_servecies.xml" value="0.13333333333333333" />
-        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_log_in.xml" value="0.22" />
-        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_log_in.xml" value="0.4" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_offers.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_pool.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_room_status.xml" value="0.12273550724637682" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_search.xml" value="0.1" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_search_dialog.xml" value="0.22" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_search_room.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_sign_up.xml" value="0.25181159420289856" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_sport.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_tanks.xml" value="0.25181159420289856" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/activity_weather.xml" value="0.264" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/adminservicescard.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/anim_slidershow.xml" value="0.25181159420289856" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/card_Search.xml" value="0.125" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/card_caption_image.xml" value="0.10625" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/card_captioned_image.xml" value="0.15217391304347827" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/card_search.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/checkinout_dialog.xml" value="0.20471014492753623" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/chezckinout_dialog.xml" value="0.20471014492753623" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/confirm_dialog.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/custom_dialog_layout.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/login_dialog.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/offers_card.xml" value="0.22" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/roomstatuscard.xml" value="0.22" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/row.xml" value="0.25181159420289856" />
         <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/slider_item.xml" value="0.1" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/slider_item1.xml" value="0.25181159420289856" />
+        <entry key="..\:/Users/HP/OneDrive/Documents/Mobile/Project2/app/src/main/res/layout/slider_item2.xml" value="0.25181159420289856" />
       </map>
     </option>
   </component>

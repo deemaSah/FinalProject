@@ -68,6 +68,9 @@ public class CheckInOut extends AppCompatActivity {
     TextView textView2;
     TextView textView3;
     String email="";
+    Dialog dialog2;
+    static String date1Str="";
+    static String date2Str="";
 
 
 
@@ -132,9 +135,9 @@ public class CheckInOut extends AppCompatActivity {
         setListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year1, int month1, int dayOfMonth1) {
-                month1 = month + 1;
-                String date = day + "-" + month1 + "-" + year;
-                date1.setText(date);
+                month1 = month1 + 1;
+                 date1Str = dayOfMonth1 + "/" + month1 + "/" + year1;
+                date1.setText(date1Str);
             }
 
         };
@@ -153,13 +156,16 @@ public class CheckInOut extends AppCompatActivity {
         });
         setListener2 = new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                month = month + 1;
-                String date = day + "-" + month+ "-" + year;
-                date2.setText(date);
+            public void onDateSet(DatePicker view, int year, int month1, int dayOfMonth) {
+                month1 = month1 + 1;
+
+                date2Str = dayOfMonth +"/" + month1 + "/" + year;
+                date2.setText(date2Str);
+
             }
 
         };
+
 
     }
     //***********************************************************************
@@ -168,7 +174,17 @@ public class CheckInOut extends AppCompatActivity {
         super.onStart();
         next = findViewById(R.id.nextbutton);
 
+
         //Create the Dialog here
+        dialog2=new Dialog(CheckInOut.this);
+        dialog2.setContentView(R.layout.checkinout_dialog);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dialog2.getWindow().setBackgroundDrawable(getDrawable(R.drawable.custom_dialog_background));
+        }
+        dialog2.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog2.setCancelable(false); //Optional
+        dialog2.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation; //Setting the animations to dialog
+        //====================================================
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.custom_dialog_layout);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -181,12 +197,33 @@ public class CheckInOut extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String[] arr=date1.getText().toString().split("/");
+                String[] arr2=date2.getText().toString().split("/");
 
-                dialog.show(); // Showing the dialog here
+                if(Integer.parseInt(arr[1])>Integer.parseInt(arr2[1])){
+                    dialog2.show();
+                }else if(Integer.parseInt(arr[1])==Integer.parseInt(arr2[1])){
+                    if(Integer.parseInt(arr[0])>Integer.parseInt(arr2[0])) {
+                        dialog2.show();
+                    }else {
+                        dialog.show(); // Showing the dialog here
+                    }
+                }
+                else {
+                    dialog.show(); // Showing the dialog here
+                }
             }
         });
         Button Okay = dialog.findViewById(R.id.btn_okay);
         Button Cancel = dialog.findViewById(R.id.btn_cancel);
+
+        Button error = dialog2.findViewById(R.id.errorbtn);
+        error.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog2.dismiss();
+            }
+        });
 
         Okay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -216,6 +253,8 @@ public class CheckInOut extends AppCompatActivity {
                     Intent intent = new Intent(CheckInOut.this, offersActivity.class);
                     startActivity(intent);
                 }
+
+
                 dialog.dismiss();
 
             }
