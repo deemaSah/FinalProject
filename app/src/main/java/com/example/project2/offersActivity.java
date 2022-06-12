@@ -71,7 +71,7 @@ public class offersActivity extends AppCompatActivity {
                                 String newPrice = object.getString("newPrice");
 
 
-                                offers obj = new offers(id,imgUrl, caption, oldPrice, newPrice);
+                                offers obj = new offers(id,imgUrl, caption, oldPrice);
                                 items.add(obj);
                             }
 

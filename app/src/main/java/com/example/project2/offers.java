@@ -5,15 +5,13 @@ public class offers {
     private String imgUrl;
     private String caption;
     private String oldPrice;
-    private String newPrice;
 
 
-    public offers(String id, String imgUrl, String caption, String oldPrice, String newPrice) {
+    public offers(String id, String imgUrl, String caption, String oldPrice) {
         this.id = id;
         this.imgUrl = imgUrl;
         this.caption = caption;
         this.oldPrice = oldPrice;
-        this.newPrice = newPrice;
     }
 
     public String getId() {
@@ -32,9 +30,6 @@ public class offers {
         return oldPrice;
     }
 
-    public String getNewPrice() {
-        return newPrice;
-    }
 
     public void setId(String id) {
         this.id = id;
@@ -52,7 +47,4 @@ public class offers {
         this.oldPrice = oldPrice;
     }
 
-    public void setNewPrice(String newPrice) {
-        this.newPrice = newPrice;
-    }
 }
